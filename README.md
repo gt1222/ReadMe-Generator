@@ -29,5 +29,6 @@ After a series of prompts would pop up where the user would answer to generate t
 
 ## Links
 [DEMO LINK](https://watch.screencastify.com/v/kGkHGwwK4mL4b4MhJfBD)
+
 [Github](https://github.com/gt1222/ReadMe-Generator)
 
