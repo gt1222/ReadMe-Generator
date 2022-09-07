@@ -3,7 +3,7 @@
 function renderLicenseBadge(license) {
   let licenseName = "";
 
-  switch(license) {
+  switch (license) {
     case "None":
       licenseName = "";
       break;
@@ -33,7 +33,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   let licenseLink = "";
 
-  switch(license) {
+  switch (license) {
     case "None":
       licenseLink = "";
       break;
@@ -63,7 +63,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   let licenseSection = "";
 
-  switch(license) {
+  switch (license) {
     case "None":
       licenseSection = "";
       break;
@@ -92,7 +92,10 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
+${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
+
 ## Description
+${data.description}
 
 ## Table of Contents
 - [Installation](#installation)
@@ -103,16 +106,22 @@ function generateMarkdown(data) {
 - [Questions](#questions)
 
 ## Installation
+${data.installation}
 
 ## Usage
+${data.usage}
 
 ## License
+${renderLicenseSection(data.license)}
 
 ## Contributing
+${data.contribution}
 
 ## Tests
+${data.test}
 
 ## Questions
+If you have any additional questions about this project, you can reach me at ${data.email}. You can find more of my work at [github.com/${data.userName}](https://github.com/${data.userName})!
 `;
 }
 
