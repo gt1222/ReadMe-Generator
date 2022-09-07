@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let licenseName = "";
+  let licenseName;
 
   switch (license) {
     case "None":
@@ -26,12 +26,13 @@ function renderLicenseBadge(license) {
       licenseName = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)]";
       break;
   }
+  return licenseName;
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  let licenseLink = "";
+  let licenseLink;
 
   switch (license) {
     case "None":
@@ -56,12 +57,13 @@ function renderLicenseLink(license) {
       licenseLink = "(http://unlicense.org/)";
       break;
   }
+  return licenseLink;
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  let licenseSection = "";
+  let licenseSection;
 
   switch (license) {
     case "None":
@@ -86,13 +88,14 @@ function renderLicenseSection(license) {
       licenseSection = "This project is licensed under the Unilicense license";
       break;
   }
+  return licenseSection;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
-${renderLicenseBadge(data.license)}${renderLicenseLink(data.license)}
+${renderLicenseBadge(data.license)}
 
 ## Description
 ${data.description}
@@ -113,6 +116,7 @@ ${data.usage}
 
 ## License
 ${renderLicenseSection(data.license)}
+${renderLicenseLink(data.license)}
 
 ## Contributing
 ${data.contribution}
