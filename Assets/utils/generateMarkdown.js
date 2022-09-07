@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   let licenseName;
-
+//switch statments to render license badge that user chooses
   switch (license) {
     case "None":
       licenseName = "";
@@ -33,7 +33,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let licenseLink;
-
+//switch statement for license link user chooses
   switch (license) {
     case "None":
       licenseLink = "";
@@ -64,7 +64,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseSection;
-
+//switch statment for what goes into license section depending on user's choice
   switch (license) {
     case "None":
       licenseSection = "";
@@ -92,6 +92,7 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
+// returns data from index.js which was given in the "name" label for each sections in markdown
 function generateMarkdown(data) {
   return `# ${data.title}
 
