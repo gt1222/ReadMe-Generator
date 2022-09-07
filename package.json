@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/gt1222/ReadMe-Generator/issues"
   },
-  "homepage": "https://github.com/gt1222/ReadMe-Generator#readme"
+  "homepage": "https://github.com/gt1222/ReadMe-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
