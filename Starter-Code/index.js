@@ -40,7 +40,7 @@ const questions = [
         type: "list",
         name: "license",
         message: "Choose a license for your project",
-        choices: ["None", "Apache2.0", "Boost Software License 1.0", "GNU GPL v3", "MIT License", "Mozilla Public License 2.0", "The Unilicense"],
+        choices: ["None", "Apache 2.0", "Boost Software License 1.0", "GNU GPL v3", "MIT License", "Mozilla Public License 2.0", "The Unilicense"],
     },
     {
         type: "input",
@@ -61,7 +61,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then(function(data) {
+    inquirer.prompt(questions).then(data => {
         writeToFile("ReadMe.md", generateMarkdown(data))
     })
 }
